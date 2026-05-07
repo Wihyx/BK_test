@@ -1,0 +1,87 @@
+/* ======== 全局重置 ======== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ======== 暗色主题（默认） ======== */
+body {
+  font-family: 'Microsoft YaHei', '微软雅黑', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #e0e0e0;
+  background: #2d2d2d;
+}
+
+/* 背景图片层（模糊） */
+body::before {
+  content: '';
+  position: fixed;
+  inset: -40px;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  z-index: -2;
+}
+
+/* 背景遮罩层（半透明黑色） */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.20);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 通用样式 */
+a { color: #409eff; text-decoration: none; }
+.container { max-width: 100%; margin: 0 auto; padding: 20px; }
+.page-main { min-height: calc(100vh - 200px); }
+
+/* ======== 亮色主题覆盖 ======== */
+body.light {
+  color: #222;
+  background: #f0f0f0;
+}
+body.light::after {
+  background: rgba(255,255,255,0.12);   /* 亮色遮罩 */
+}
+
+/* header - 亮色主题 header */
+body.light .site-header { background: rgba(0,0,0,.55) !important; }
+
+/* glass-card - 玻璃卡片（亮色） */
+body.light .glass-card {
+  background: rgba(255,255,255,.7);
+  color: #333;
+  border-color: rgba(0,0,0,.06);
+}
+body.light .glass-card .right-title,
+body.light .glass-card .user-name,
+body.light .glass-card .stat strong,
+body.light .glass-card .nav-item { color: #333; }
+body.light .glass-card .user-bio,
+body.light .glass-card .stat span,
+body.light .glass-card .nav-item,
+body.light .glass-card .latest-time { color: #666; }
+body.light .glass-card .nav-item:hover { background: rgba(0,0,0,.04); color: #111; }
+body.light .glass-card .nav-item.active { background: rgba(64,158,255,.08); color: #409eff; }
+body.light .glass-card .latest-title { color: #333; }
+body.light .latest-item { color: #333; }
+body.light .latest-item a { color: #333; }
+body.light .latest-item .feed-source-tag { color: #555; }
+body.light .right-card .latest-item { color: #222; }
+body.light .right-card .latest-item .latest-title { color: #222; }
+body.light .feed-cat-tag { color: #333; }
+body.light .glass-card .right-title { border-bottom-color: rgba(0,0,0,.06); }
+body.light .latest-meta { color: #888; }
+body.light .user-avatar { border-color: rgba(0,0,0,.1); }
+
+/* hero - 首页英雄区域（亮色） */
+body.light .hero-title { color: #222; text-shadow: 0 2px 12px rgba(0,0,0,.15); }
+body.light .hero-quote { color: rgba(0,0,0,.55); }
+
+/* card-item - 文章卡片（亮色） */
+body.light .card-item { background: rgba(255,255,255,.88); color: #222; }
+body.light .card-item h3 { color: #222; }
+body.light .card-item p { color: #555; }
+body.light .card-time { color: #888; }
+body.light .card-stats { color: #777; }

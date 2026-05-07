@@ -1,0 +1,69 @@
+# Java / Maven
+blog-backend/target/
+blog-backend/**/target/
+blog-backend/.mvn/
+blog-backend/data/
+blog-backend/uploads/
+/data/
+/uploads/
+**/target/
+**/generated-sources/
+**/generated-test-sources/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.idea/
+*.class
+*.jar
+
+# Node / frontend
+blog-frontend/node_modules/
+blog-frontend/dist/
+blog-frontend/.vite/
+blog-frontend/.cache/
+blog-frontend/npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sw?
+
+# OS 文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地环境配置
+.env
+.env.*
+.local
+*.local
+
+# 日志 / 临时文件
+*.log
+*.tmp
+*.temp
+npm-debug.log*
+yarn-debug.log*
+
+# 可选：运行时上传文件夹（如果不需要纳入版本管理）
+# /uploads/
+# blog-backend/uploads/
+
+# 其他可忽略
+*.bak
+*.old
+*.cache
+
+# Maven wrapper
+!blog-backend/mvnw
+!blog-backend/mvnw.cmd
